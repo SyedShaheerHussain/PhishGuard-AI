@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PhishGuard AI</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<canvas id="rain"></canvas>
+<main>
+<header><div class="logo">🛡️ PHISH<span>GUARD</span> AI</div><div class="pill"><i></i> LIVE</div></header>
+<section class="hero"><h1 class="glitch" data-t="Is it a scam?">Is it a scam?</h1>
+<p>Paste a suspicious email, SMS or link. AI scans it for phishing in seconds.</p></section>
+<div class="grid">
+ <section class="card">
+  <textarea id="input" placeholder="e.g. Your account is locked! Verify now: http://paypa1-secure.xyz/login"></textarea>
+  <div class="row"><button id="scan">⚡ SCAN THREAT</button><button class="ghost" id="demo">Try sample</button></div>
+  <div id="result" class="result hidden">
+   <svg viewBox="0 0 120 120" class="gauge"><circle cx="60" cy="60" r="52" class="bg"/><circle id="arc" cx="60" cy="60" r="52" class="fg"/><text id="score" x="60" y="68">0</text></svg>
+   <div><h2 id="verdict"></h2><ul id="reasons"></ul><p id="tip"></p></div>
+  </div>
+  <div id="loader" class="loader hidden"><div class="radar"></div><span>Analyzing payload…</span></div>
+ </section>
+ <aside class="card"><h3>📡 Live Threat Feed</h3>
+  <div class="stats"><div><b id="sTotal">0</b>scans</div><div><b id="sBad">0</b>threats</div></div>
+  <ul id="feed"></ul></aside>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
